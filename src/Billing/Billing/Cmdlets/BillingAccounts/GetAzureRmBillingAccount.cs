@@ -58,8 +58,8 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingAccounts
                 {
                     WriteObject(
                         string.IsNullOrWhiteSpace(expand)
-                            ? BillingManagementClient.BillingAccounts.List().Value.Select(x => new PSBillingAccount(x))
-                            : BillingManagementClient.BillingAccounts.List(expand).Value
+                            ? BillingManagementClient.BillingAccounts.List().Select(x => new PSBillingAccount(x))
+                            : BillingManagementClient.BillingAccounts.List(expand)
                                 .Select(x => new PSBillingAccount(x)), true);
                     return;
                 }

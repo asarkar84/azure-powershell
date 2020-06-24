@@ -53,7 +53,7 @@ namespace Microsoft.Azure.Commands.Billing.Models
                 this.Id = billingProfile.Id;
                 this.Type = billingProfile.Type;
                 this.Name = billingProfile.Name;
-                this.Address = new PSAddressDetails(billingProfile.Address);
+                this.Address = new PSAddressDetails(billingProfile.BillTo);
                 this.DisplayName = billingProfile.DisplayName;
                 this.PurchaseOrderNumber = billingProfile.PoNumber;
                 this.InvoiceEmailOptIn = billingProfile.InvoiceEmailOptIn;
@@ -68,7 +68,7 @@ namespace Microsoft.Azure.Commands.Billing.Models
                 if (billingProfile.InvoiceSections != null)
                 {
                     this.InvoiceSections =
-                        billingProfile.InvoiceSections.Select(invoiceSection => new PSInvoiceSection(invoiceSection));
+                        billingProfile.InvoiceSections.Value.Select(invoiceSection => new PSInvoiceSection(invoiceSection));
                 }
             }
         }

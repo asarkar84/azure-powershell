@@ -45,7 +45,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.InvoiceSections
                 {
                     WriteObject(
                         BillingManagementClient.InvoiceSections
-                            .ListByBillingProfile(BillingAccountName, BillingProfileName).Value
+                            .ListByBillingProfile(BillingAccountName, BillingProfileName)
                             .Select(x => new PSInvoiceSection(x)), true);
                     return;
                 }
