@@ -20,7 +20,7 @@ Get-AzBillingProfile -BillingAccountName <String> -BillingProfileName <String> [
 
 ### Single
 ```
-Get-AzBillingProfile -BillingAccountName <String> -BillingProfileName <String> -Name <System.Collections.Generic.List`1[System.String]>
+Get-AzBillingProfile -BillingAccountName <String> -BillingProfileName <String> -Name <System.Collections.Generic.List`1[System.String]> [-ExpandInvoiceSections]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 

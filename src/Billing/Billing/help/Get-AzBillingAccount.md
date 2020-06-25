@@ -20,7 +20,7 @@ Get-AzBillingAccount [-IncludeAddress] [-ExpandBillingProfiles] [-ExpandInvoiceS
 
 ### Single
 ```
-Get-AzBillingAccount -Name <System.Collections.Generic.List`1[System.String]>
+Get-AzBillingAccount -Name <System.Collections.Generic.List`1[System.String]> [-IncludeAddress] [-ExpandBillingProfiles] [-ExpandInvoiceSections] [-ListEntitiesToCreateSubscription]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
@@ -142,6 +142,21 @@ Parameter Sets: Single
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListEntitiesToCreateSubscription
+List the billing entities under billing account which can be used as input to create subscription.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: Single
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
