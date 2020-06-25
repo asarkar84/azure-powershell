@@ -14,7 +14,128 @@
                 <Label>Name</Label>
                 <PropertyName>Name</PropertyName>
               </ListItem>
-              <ListItem>
+	            <ListItem>
+		            <Label>AmountDue</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>AmountDue</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.AmountDue.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.AmountDue.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.AmountDue.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.AmountDue.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>AzurePrepaymentApplied</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>AzurePrepaymentApplied</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.AzurePrepaymentApplied.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.AzurePrepaymentApplied.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.AzurePrepaymentApplied.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.AzurePrepaymentApplied.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>BilledAmount</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>BilledAmount</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.BilledAmount.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.BilledAmount.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.BilledAmount.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.BilledAmount.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	          <ListItem>
+		        <Label>BillingProfileId</Label>
+		        <PropertyName>BillingProfileId</PropertyName>
+	          </ListItem>
+				<ListItem>
+					<Label>BillingProfileDisplayName</Label>
+					<PropertyName>BillingProfileDisplayName</PropertyName>
+				</ListItem>
+	            <ListItem>
+		            <Label>CreditAmount</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>CreditAmount</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.CreditAmount.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.CreditAmount.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.CreditAmount.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.CreditAmount.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>DueDate</Label>
+		            <ScriptBlock>$_.DueDate.ToString("yyyy-MM-dd")</ScriptBlock>
+	            </ListItem>
+	            <ListItem>
+		            <Label>FreeAzureCreditApplied</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>FreeAzureCreditApplied</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.FreeAzureCreditApplied.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.FreeAzureCreditApplied.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.FreeAzureCreditApplied.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.FreeAzureCreditApplied.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>InvoiceDate</Label>
+		            <ScriptBlock>$_.InvoiceDate.ToString("yyyy-MM-dd")</ScriptBlock>
+	            </ListItem>
+	            <ListItem>
                 <Label>InvoicePeriodStartDate</Label>
                 <ScriptBlock>$_.InvoicePeriodStartDate.ToString("yyyy-MM-dd")</ScriptBlock>
               </ListItem>
@@ -22,7 +143,86 @@
                 <Label>InvoicePeriodEndDate</Label>
                 <ScriptBlock>$_.InvoicePeriodEndDate.ToString("yyyy-MM-dd")</ScriptBlock>
               </ListItem>
-              <ListItem>
+	            <ListItem>
+		            <Label>IsMonthlyInvoice</Label>
+		            <ScriptBlock>$_.IsMonthlyInvoice.ToString()</ScriptBlock>
+	            </ListItem>
+	            <ListItem>
+		            <Label>PurchaseOrderNumber</Label>
+		            <ScriptBlock>$_.PurchaseOrderNumber.ToString()</ScriptBlock>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Status</Label>
+		            <ScriptBlock>$_.Status.ToString()</ScriptBlock>
+	            </ListItem>
+	            <ListItem>
+		            <Label>SubscriptionId</Label>
+		            <ScriptBlock>$_.SubscriptionId.ToString()</ScriptBlock>
+	            </ListItem>
+	            <ListItem>
+		            <Label>SubTotal</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>SubTotal</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.SubTotal.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.SubTotal.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.SubTotal.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.SubTotal.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>TaxAmount</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>TaxAmount</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.TaxAmount.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.TaxAmount.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.TaxAmount.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.TaxAmount.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>TotalAmount</Label>
+		            <ScriptBlock>""</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <PropertyName>TotalAmount</PropertyName>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Currency</Label>
+		            <ScriptBlock>$_.TotalAmount.Currency</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.TotalAmount.Currency</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
+		            <Label>Amount</Label>
+		            <ScriptBlock>$_.TotalAmount.Value</ScriptBlock>
+		            <ItemSelectionCondition>
+			            <ScriptBlock>$_.TotalAmount.Value</ScriptBlock>
+		            </ItemSelectionCondition>
+	            </ListItem>
+	            <ListItem>
                 <Label>DownloadUrl</Label>
                 <PropertyName>DownloadUrl</PropertyName>
                 <ItemSelectionCondition>
@@ -31,18 +231,12 @@
               </ListItem>
               <ListItem>
                 <Label>DownloadUrlExpiry</Label>
-                <ScriptBlock>$_.DownloadUrlExpiry.ToLocalTime()</ScriptBlock>
+                <ScriptBlock>$_.DownloadUrlExpiry.ToString("yyyy-MM-dd")</ScriptBlock>
                 <ItemSelectionCondition>
                   <PropertyName>DownloadUrlExpiry</PropertyName>
                 </ItemSelectionCondition>
               </ListItem>
-              <ListItem>
-                <Label>BillingPeriodNames</Label>
-                <PropertyName>BillingPeriodNames</PropertyName>
-                <ItemSelectionCondition>
-                  <PropertyName>BillingPeriodNames</PropertyName>
-                </ItemSelectionCondition>              
-              </ListItem>
+
             </ListItems>
           </ListEntry>
         </ListEntries>

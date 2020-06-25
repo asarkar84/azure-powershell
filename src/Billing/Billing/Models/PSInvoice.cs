@@ -23,21 +23,7 @@ namespace Microsoft.Azure.Commands.Billing.Models
 {
     public class PSInvoice
     {
-        //public string Id { get; private set; }
-
-        //public string Name { get; private set; }
-
-        //public string Type { get; private set; }
-
-        //public DateTime? InvoicePeriodStartDate { get; private set; }
-
-        //public DateTime? InvoicePeriodEndDate { get; private set; }
-
-        //public string DownloadUrl { get; set; }
-
-        //public DateTime? DownloadUrlExpiry { get; set; }
-
-        //public List<string> BillingPeriodNames { get; set; }
+        public PSAmount AmountDue { get; set; }
 
         public PSAmount AzurePrepaymentApplied { get; set; }
 
@@ -51,6 +37,10 @@ namespace Microsoft.Azure.Commands.Billing.Models
 
         public IEnumerable<PSInvoiceDocument> Documents { get; set; }
 
+        public string DownloadUrl { get; set; }
+
+        public DateTime? DownloadUrlExpiry { get; set; }
+
         public string DueDate { get; set; }
 
         public PSAmount FreeAzureCreditApplied { get; set; }
@@ -62,6 +52,8 @@ namespace Microsoft.Azure.Commands.Billing.Models
         public DateTime? InvoicePeriodStartDate { get; set; }
 
         public bool? IsMonthlyInvoice { get; set; }
+
+        public string Name { get; set; }
 
         public string PurchaseOrderNumber { get; set; }
 
@@ -81,24 +73,26 @@ namespace Microsoft.Azure.Commands.Billing.Models
 
         public PSInvoice(Invoice invoice)
         {
-            AzurePrepaymentApplied = invoice.AzurePrepaymentApplied.ToPSAmount();
-            BilledAmount = invoice.BilledAmount.ToPSAmount();
+            AmountDue = invoice.AmountDue?.ToPSAmount();
+            AzurePrepaymentApplied = invoice.AzurePrepaymentApplied?.ToPSAmount();
+            BilledAmount = invoice.BilledAmount?.ToPSAmount();
             BillingProfileDisplayName = invoice.BillingProfileDisplayName;
             BillingProfileId = invoice.BillingProfileId;
-            CreditAmount = invoice.CreditAmount.ToPSAmount();
-            DueDate = invoice.DueDate.ToString();
-            FreeAzureCreditApplied = invoice.FreeAzureCreditApplied.ToPSAmount();
+            CreditAmount = invoice.CreditAmount?.ToPSAmount();
+            DueDate = invoice.DueDate?.ToString("O");
+            FreeAzureCreditApplied = invoice.FreeAzureCreditApplied?.ToPSAmount();
             InvoiceDate = invoice.InvoiceDate;
             InvoicePeriodEndDate = invoice.InvoicePeriodEndDate;
             InvoicePeriodStartDate = invoice.InvoicePeriodStartDate;
             IsMonthlyInvoice = invoice.IsMonthlyInvoice;
+            Name = invoice.Name;
             PurchaseOrderNumber = invoice.PurchaseOrderNumber;
-            Status = invoice.Status != null ? Enum.GetName(typeof(InvoiceStatus), invoice.Status) : string.Empty;
+            Status = invoice.Status;
             Documents = invoice.Documents.Select(doc => doc.ToPSInvoiceDocument());
-            SubTotal = invoice.SubTotal.ToPSAmount();
+            SubTotal = invoice.SubTotal?.ToPSAmount();
             SubscriptionId = invoice.SubscriptionId;
-            TaxAmount = invoice.TaxAmount.ToPSAmount();
-            TotalAmount = invoice.TotalAmount.ToPSAmount();
+            TaxAmount = invoice.TaxAmount?.ToPSAmount();
+            TotalAmount = invoice.TotalAmount?.ToPSAmount();
         }
     }
 }

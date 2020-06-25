@@ -63,7 +63,7 @@ Get invoice with specified name
 #>
 function Test-GetInvoiceWithName
 {
-	$invoice = Get-AzBillingInvoice -Name Test
+	$invoice = Get-AzBillingInvoice -Name T000512627
 
 	Assert-NotNull $invoice
 	Assert-Null $invoice.Name
