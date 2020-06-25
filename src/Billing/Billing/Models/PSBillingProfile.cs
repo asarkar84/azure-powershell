@@ -80,7 +80,7 @@ namespace Microsoft.Azure.Commands.Billing.Models
                     this.BillTo = new PSAddressDetails(billingProfile.BillTo);
                 }
 
-                if (billingProfile.EnabledAzurePlans != null)
+                if (billingProfile.EnabledAzurePlans != null && billingProfile.EnabledAzurePlans.Any())
                 {
                     this.EnabledAzurePlans =
                         billingProfile.EnabledAzurePlans.Select(azurePlan => new PSAzurePlan(azurePlan));

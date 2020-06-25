@@ -249,6 +249,66 @@
       </ListControl>
     </View>
     <View>
+      <Name>Microsoft.Azure.Commands.Billing.Models.PSEntityToCreateSubscription</Name>
+      <ViewSelectedBy>
+        <TypeName>Microsoft.Azure.Commands.Billing.Models.PSEntityToCreateSubscription</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>BillingProfileId</Label>
+                <PropertyName>BillingProfileId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>BillingProfileDisplayName</Label>
+                <PropertyName>BillingProfileDisplayName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>BillingProfileStatus</Label>
+                <PropertyName>BillingProfileStatus</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>BillingProfileStatusReasonCode</Label>
+                <PropertyName>BillingProfileStatusReasonCode</PropertyName>
+                <ItemSelectionCondition>
+                  <PropertyName>BillingProfileStatusReasonCode</PropertyName>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>BillingProfileSpendingLimit</Label>
+                <PropertyName>BillingProfileSpendingLimit</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>BillingProfileSystemId</Label>
+                <PropertyName>BillingProfileSystemId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>InvoiceSectionId</Label>
+                <PropertyName>InvoiceSectionId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>InvoiceSectionDisplayName</Label>
+                <PropertyName>InvoiceSectionDisplayName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>InvoiceSectionSystemId</Label>
+                <PropertyName>InvoiceSectionSystemId</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>EnabledAzurePlans</Label>
+                <PropertyName>EnabledAzurePlans</PropertyName>
+                <ItemSelectionCondition>
+                  <PropertyName>EnabledAzurePlans</PropertyName>
+                </ItemSelectionCondition>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+    <View>
       <Name>Microsoft.Azure.Commands.Billing.Models.PSBillingProfile</Name>
       <ViewSelectedBy>
         <TypeName>Microsoft.Azure.Commands.Billing.Models.PSBillingProfile</TypeName>

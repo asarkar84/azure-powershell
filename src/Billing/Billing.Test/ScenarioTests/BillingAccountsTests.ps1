@@ -94,6 +94,25 @@ function Test-ListBillingAccountsWithInvoiceSections
 .SYNOPSIS
 Get billing account with specified name
 #>
+function Test-ListBillingEntitiesToCreateSubscription
+{
+    $sampleBillingAccounts = Get-AzBillingAccount
+    Assert-True { $sampleBillingAccounts.Count -ge 1 }
+
+	$billingEntitiesToCreateSubscription = Get-AzBillingAccount -Name $sampleBillingAccounts[0].Name -ListEntitiesToCreateSubscription		
+    Assert-True { $billingEntitiesToCreateSubscription.Count -ge 1 }
+	Assert-NotNull $billingEntitiesToCreateSubscription[0].BillingProfileId
+	Assert-NotNull $billingEntitiesToCreateSubscription[0].BillingProfileDisplayName
+	Assert-NotNull $billingEntitiesToCreateSubscription[0].BillingProfileStatus
+	Assert-NotNull $billingEntitiesToCreateSubscription[0].InvoiceSectionId
+	Assert-NotNull $billingEntitiesToCreateSubscription[0].InvoiceSectionDisplayName	
+	Assert-NotNull $billingEntitiesToCreateSubscription[0].EnabledAzurePlans
+}
+
+<#
+.SYNOPSIS
+Get billing account with specified name
+#>
 function Test-GetBillingAccountWithName
 {
     $sampleBillingAccounts = Get-AzBillingAccount
