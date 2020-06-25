@@ -123,91 +123,124 @@
                 <PropertyName>DisplayName</PropertyName>
               </ListItem>
               <ListItem>
+                <Label>AccountStatus</Label>
+                <PropertyName>AccountStatus</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>AccountType</Label>
+                <PropertyName>AccountType</PropertyName>
+              </ListItem>
+              <ListItem>
                 <Label>AgreementType</Label>
                 <PropertyName>AgreementType</PropertyName>
               </ListItem>
               <ListItem>
-                <Label>Address</Label>
-                <ScriptBlock>""</ScriptBlock>
-                <ItemSelectionCondition>
-                  <PropertyName>Address</PropertyName>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>FirstName</Label>
-                <ScriptBlock>$_.Address.FirstName</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.FirstName</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>LastName</Label>
-                <ScriptBlock>$_.Address.LastName</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.LastName</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>CompanyName</Label>
-                <ScriptBlock>$_.Address.CompanyName</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.CompanyName</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>AddressLine1</Label>
-                <ScriptBlock>$_.Address.AddressLine1</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.AddressLine1</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>AddressLine2</Label>
-                <ScriptBlock>$_.Address.AddressLine2</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.AddressLine2</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>AddressLine3</Label>
-                <ScriptBlock>$_.Address.AddressLine3</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.AddressLine3</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>City</Label>
-                <ScriptBlock>$_.Address.City</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.City</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>Region</Label>
-                <ScriptBlock>$_.Address.Region</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.Region</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>Country</Label>
-                <ScriptBlock>$_.Address.Country</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.Country</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>PostalCode</Label>
-                <ScriptBlock>$_.Address.PostalCode</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.PostalCode</ScriptBlock>
-                </ItemSelectionCondition>
+                <Label>HasReadAccess</Label>
+                <PropertyName>HasReadAccess</PropertyName>
               </ListItem>
               <ListItem>
                 <Label>BillingProfiles</Label>
                 <PropertyName>BillingProfiles</PropertyName>
                 <ItemSelectionCondition>
                   <PropertyName>BillingProfiles</PropertyName>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>SoldTo</Label>
+                <ScriptBlock>""</ScriptBlock>
+                <ItemSelectionCondition>
+                  <PropertyName>SoldTo</PropertyName>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>FirstName</Label>
+                <ScriptBlock>$_.SoldTo.FirstName</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.FirstName</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>LastName</Label>
+                <ScriptBlock>$_.SoldTo.LastName</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.LastName</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>CompanyName</Label>
+                <ScriptBlock>$_.SoldTo.CompanyName</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.CompanyName</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>AddressLine1</Label>
+                <ScriptBlock>$_.SoldTo.AddressLine1</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.AddressLine1</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>AddressLine2</Label>
+                <ScriptBlock>$_.SoldTo.AddressLine2</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.AddressLine2</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>AddressLine3</Label>
+                <ScriptBlock>$_.SoldTo.AddressLine3</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.AddressLine3</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>City</Label>
+                <ScriptBlock>$_.SoldTo.City</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.City</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>District</Label>
+                <ScriptBlock>$_.SoldTo.District</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.District</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>Region</Label>
+                <ScriptBlock>$_.SoldTo.Region</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.Region</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>Country</Label>
+                <ScriptBlock>$_.SoldTo.Country</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.Country</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>PostalCode</Label>
+                <ScriptBlock>$_.SoldTo.PostalCode</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.PostalCode</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>Email</Label>
+                <ScriptBlock>$_.SoldTo.Email</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.Email</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>PhoneNumber</Label>
+                <ScriptBlock>$_.SoldTo.PhoneNumber</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.SoldTo.PhoneNumber</ScriptBlock>
                 </ItemSelectionCondition>
               </ListItem>
             </ListItems>
@@ -237,10 +270,6 @@
                 <PropertyName>Currency</PropertyName>
               </ListItem>
               <ListItem>
-                <Label>HasReadAccess</Label>
-                <PropertyName>HasReadAccess</PropertyName>
-              </ListItem>
-              <ListItem>
                 <Label>InvoiceDay</Label>
                 <PropertyName>InvoiceDay</PropertyName>
               </ListItem>
@@ -249,80 +278,22 @@
                 <PropertyName>InvoiceEmailOptIn</PropertyName>
               </ListItem>
               <ListItem>
-                <Label>Address</Label>
-                <ScriptBlock>""</ScriptBlock>
-                <ItemSelectionCondition>
-                  <PropertyName>Address</PropertyName>
-                </ItemSelectionCondition>
+                <Label>PurchaseOrderNumber</Label>
+                <PropertyName>PurchaseOrderNumber</PropertyName>
               </ListItem>
               <ListItem>
-                <Label>FirstName</Label>
-                <ScriptBlock>$_.Address.FirstName</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.FirstName</ScriptBlock>
-                </ItemSelectionCondition>
+                <Label>SpendingLimit</Label>
+                <PropertyName>SpendingLimit</PropertyName>
               </ListItem>
               <ListItem>
-                <Label>LastName</Label>
-                <ScriptBlock>$_.Address.LastName</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.LastName</ScriptBlock>
-                </ItemSelectionCondition>
+                <Label>Status</Label>
+                <PropertyName>Status</PropertyName>
               </ListItem>
               <ListItem>
-                <Label>CompanyName</Label>
-                <ScriptBlock>$_.Address.CompanyName</ScriptBlock>
+                <Label>StatusReasonCode</Label>
+                <PropertyName>StatusReasonCode</PropertyName>
                 <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.CompanyName</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>AddressLine1</Label>
-                <ScriptBlock>$_.Address.AddressLine1</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.AddressLine1</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>AddressLine2</Label>
-                <ScriptBlock>$_.Address.AddressLine2</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.AddressLine2</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>AddressLine3</Label>
-                <ScriptBlock>$_.Address.AddressLine3</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.AddressLine3</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>City</Label>
-                <ScriptBlock>$_.Address.City</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.City</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>Region</Label>
-                <ScriptBlock>$_.Address.Region</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.Region</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>Country</Label>
-                <ScriptBlock>$_.Address.Country</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.Country</ScriptBlock>
-                </ItemSelectionCondition>
-              </ListItem>
-              <ListItem>
-                <Label>PostalCode</Label>
-                <ScriptBlock>$_.Address.PostalCode</ScriptBlock>
-                <ItemSelectionCondition>
-                  <ScriptBlock>$_.Address.PostalCode</ScriptBlock>
+                  <PropertyName>StatusReasonCode</PropertyName>
                 </ItemSelectionCondition>
               </ListItem>
               <ListItem>
@@ -337,6 +308,108 @@
                 <PropertyName>InvoiceSections</PropertyName>
                 <ItemSelectionCondition>
                   <PropertyName>InvoiceSections</PropertyName>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>HasReadAccess</Label>
+                <PropertyName>HasReadAccess</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>BillTo</Label>
+                <ScriptBlock>""</ScriptBlock>
+                <ItemSelectionCondition>
+                  <PropertyName>BillTo</PropertyName>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>FirstName</Label>
+                <ScriptBlock>$_.BillTo.FirstName</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.FirstName</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>LastName</Label>
+                <ScriptBlock>$_.BillTo.LastName</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.LastName</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>CompanyName</Label>
+                <ScriptBlock>$_.BillTo.CompanyName</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.CompanyName</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>AddressLine1</Label>
+                <ScriptBlock>$_.BillTo.AddressLine1</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.AddressLine1</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>AddressLine2</Label>
+                <ScriptBlock>$_.BillTo.AddressLine2</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.AddressLine2</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>AddressLine3</Label>
+                <ScriptBlock>$_.BillTo.AddressLine3</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.AddressLine3</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>City</Label>
+                <ScriptBlock>$_.BillTo.City</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.City</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>District</Label>
+                <ScriptBlock>$_.BillTo.District</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.District</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>Region</Label>
+                <ScriptBlock>$_.BillTo.Region</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.Region</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>Country</Label>
+                <ScriptBlock>$_.BillTo.Country</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.Country</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>PostalCode</Label>
+                <ScriptBlock>$_.BillTo.PostalCode</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.PostalCode</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>Email</Label>
+                <ScriptBlock>$_.BillTo.Email</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.Email</ScriptBlock>
+                </ItemSelectionCondition>
+              </ListItem>
+              <ListItem>
+                <Label>PhoneNumber</Label>
+                <ScriptBlock>$_.BillTo.PhoneNumber</ScriptBlock>
+                <ItemSelectionCondition>
+                  <ScriptBlock>$_.BillTo.PhoneNumber</ScriptBlock>
                 </ItemSelectionCondition>
               </ListItem>
             </ListItems>
@@ -360,6 +433,13 @@
               <ListItem>
                 <Label>DisplayName</Label>
                 <PropertyName>DisplayName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Labels</Label>
+                <PropertyName>Labels</PropertyName>
+                <ItemSelectionCondition>
+                  <PropertyName>Labels</PropertyName>
+                </ItemSelectionCondition>
               </ListItem>
             </ListItems>
           </ListEntry>

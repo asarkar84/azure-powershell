@@ -12,6 +12,7 @@
 // limitations under the License.
 // ----------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using ApiInvoiceSection = Microsoft.Azure.Management.Billing.Models.InvoiceSection;
 
 namespace Microsoft.Azure.Commands.Billing.Models
@@ -25,7 +26,11 @@ namespace Microsoft.Azure.Commands.Billing.Models
         public string Type { get; private set; }
 
         public string DisplayName { get; private set; }
-        
+
+        public IDictionary<string, string> Labels { get; set; }
+
+        public string SystemId { get; private set; }
+
         public PSInvoiceSection()
         {
         }
@@ -38,6 +43,8 @@ namespace Microsoft.Azure.Commands.Billing.Models
                 this.Type = invoiceSection.Type;
                 this.Name = invoiceSection.Name;
                 this.DisplayName = invoiceSection.DisplayName;
+                this.Labels = invoiceSection.Labels;
+                this.SystemId = invoiceSection.SystemId;
             }
         }
     }

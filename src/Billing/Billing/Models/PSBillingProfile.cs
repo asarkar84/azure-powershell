@@ -14,6 +14,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Azure.Commands.Common.Strategies;
 using ApiBillingProfile = Microsoft.Azure.Management.Billing.Models.BillingProfile;
 
 namespace Microsoft.Azure.Commands.Billing.Models
@@ -26,22 +27,32 @@ namespace Microsoft.Azure.Commands.Billing.Models
 
         public string Type { get; private set; }
 
-        public PSAddressDetails Address { get; set; }
-
-        public string DisplayName { get; private set; }
-        
-        public string PurchaseOrderNumber { get; private set; }
-
-        public bool? InvoiceEmailOptIn { get; private set; }
-        
-        public int? InvoiceDay { get; private set; }
+        public PSAddressDetails BillTo { get; set; }
 
         public string Currency { get; private set; }
 
+        public string DisplayName { get; private set; }
+
         public IEnumerable<PSAzurePlan> EnabledAzurePlans { get; private set; }
 
-        public IEnumerable<PSInvoiceSection> InvoiceSections { get; private set; }
+        public bool? HasReadAccess { get; private set; }
+
+        public string PurchaseOrderNumber { get; private set; }
+
+        public int? InvoiceDay { get; private set; }
+
+        public bool? InvoiceEmailOptIn { get; private set; }
         
+        public IEnumerable<PSInvoiceSection> InvoiceSections { get; private set; }
+
+        public string SpendingLimit { get; private set; }
+
+        public string Status { get; private set; }
+
+        public string StatusReasonCode { get; private set; }
+
+        public string SystemId { get; private set; }
+
         public PSBillingProfile()
         {
         }
@@ -53,19 +64,29 @@ namespace Microsoft.Azure.Commands.Billing.Models
                 this.Id = billingProfile.Id;
                 this.Type = billingProfile.Type;
                 this.Name = billingProfile.Name;
-                this.Address = new PSAddressDetails(billingProfile.BillTo);
-                this.DisplayName = billingProfile.DisplayName;
-                this.PurchaseOrderNumber = billingProfile.PoNumber;
-                this.InvoiceEmailOptIn = billingProfile.InvoiceEmailOptIn;
-                this.InvoiceDay = billingProfile.InvoiceDay;
                 this.Currency = billingProfile.Currency;
+                this.DisplayName = billingProfile.DisplayName;
+                this.HasReadAccess = billingProfile.HasReadAccess;
+                this.PurchaseOrderNumber = billingProfile.PoNumber;
+                this.InvoiceDay = billingProfile.InvoiceDay;
+                this.InvoiceEmailOptIn = billingProfile.InvoiceEmailOptIn;
+                this.SpendingLimit = billingProfile.SpendingLimit;
+                this.Status = billingProfile.Status;
+                this.StatusReasonCode = billingProfile.StatusReasonCode;
+                this.SystemId = billingProfile.SystemId;
+
+                if (billingProfile.BillTo != null)
+                {
+                    this.BillTo = new PSAddressDetails(billingProfile.BillTo);
+                }
+
                 if (billingProfile.EnabledAzurePlans != null)
                 {
                     this.EnabledAzurePlans =
                         billingProfile.EnabledAzurePlans.Select(azurePlan => new PSAzurePlan(azurePlan));
                 }
 
-                if (billingProfile.InvoiceSections != null)
+                if (billingProfile.InvoiceSections?.Value != null && billingProfile.InvoiceSections.Value.Any())
                 {
                     this.InvoiceSections =
                         billingProfile.InvoiceSections.Value.Select(invoiceSection => new PSInvoiceSection(invoiceSection));
