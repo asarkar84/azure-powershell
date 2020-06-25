@@ -32,11 +32,17 @@ namespace Microsoft.Azure.Commands.Billing.Models
 
         public string City { get; set; }
 
-        public string Region { get; set; }
-
         public string Country { get; set; }
 
+        public string District { get; set; }
+
+        public string Email { get; set; }
+        
+        public string PhoneNumber { get; set; }
+        
         public string PostalCode { get; set; }
+
+        public string Region { get; set; }
 
         public PSAddressDetails()
         {
@@ -53,9 +59,12 @@ namespace Microsoft.Azure.Commands.Billing.Models
                 this.AddressLine2 = addressDetails.AddressLine2;
                 this.AddressLine3 = addressDetails.AddressLine3;
                 this.City = addressDetails.City;
-                this.Region = addressDetails.Region;
                 this.Country = addressDetails.Country;
+                this.District = addressDetails.District;
+                this.Email = addressDetails.Email;
+                this.PhoneNumber = addressDetails.PhoneNumber;
                 this.PostalCode = addressDetails.PostalCode;
+                this.Region = addressDetails.Region;
             }
         }
     }

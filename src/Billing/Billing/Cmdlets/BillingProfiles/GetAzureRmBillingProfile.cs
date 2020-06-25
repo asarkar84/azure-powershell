@@ -36,10 +36,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingProfiles
         [Parameter(Mandatory = true, Position = 0, HelpMessage = "Name of the billing account to get billing profiles under it.")]
         [ValidateNotNullOrEmpty]
         public string BillingAccountName { get; set; }
-
-        [Parameter(Mandatory = false, HelpMessage = "Expand the enabled azure plans under the billing profiles.")]
-        public SwitchParameter ExpandEnabledAzurePlans { get; set; }
-
+        
         [Parameter(Mandatory = false, HelpMessage = "Expand the invoice sections under the billing profiles.")]
         public SwitchParameter ExpandInvoiceSections { get; set; }
 
@@ -47,9 +44,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingProfiles
         {
             try
             {
-                var expand = this.ExpandEnabledAzurePlans.IsPresent ? EnabledAzurePlansExpand : null;
-
-                expand += this.ExpandInvoiceSections.IsPresent ? string.IsNullOrWhiteSpace(expand) ? InvoiceSectionsExpand : "," + InvoiceSectionsExpand : null;
+                var expand = this.ExpandInvoiceSections.IsPresent ? InvoiceSectionsExpand : null;
                 
                 if (ParameterSetName.Equals(Constants.ParameterSetNames.ListParameterSet))
                 {

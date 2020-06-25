@@ -60,6 +60,13 @@ namespace Microsoft.Azure.Commands.Billing.Test.ScenarioTests
 
         [Fact]
         [Trait(Category.AcceptanceType, Category.CheckIn)]
+        public void TestListBillingEntitiesToCreateSubscription()
+        {
+            TestController.NewInstance.RunPowerShellTest(_logger, "Test-ListBillingEntitiesToCreateSubscription");
+        }
+
+        [Fact]
+        [Trait(Category.AcceptanceType, Category.CheckIn)]
         public void TestGetBillingAccountWithName()
         {
             TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetBillingAccountWithName");

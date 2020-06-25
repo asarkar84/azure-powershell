@@ -25,15 +25,21 @@ namespace Microsoft.Azure.Commands.Billing.Models
         public string Name { get; private set; }
 
         public string Type { get; private set; }
-
-        public string DisplayName { get; private set; }
         
-        public PSAddressDetails Address { get; private set; }
+        public string AccountStatus { get; private set; }
+
+        public string AccountType { get; private set; }
 
         public string AgreementType { get; private set; }
 
         public IEnumerable<PSBillingProfile> BillingProfiles  { get; private set; }
-        
+
+        public string DisplayName { get; private set; }
+
+        public PSAddressDetails SoldTo { get; private set; }
+
+        public bool? HasReadAccess { get; private set; }
+
         public PSBillingAccount()
         {
         }
@@ -45,14 +51,17 @@ namespace Microsoft.Azure.Commands.Billing.Models
                 this.Id = billingAccount.Id;
                 this.Type = billingAccount.Type;
                 this.Name = billingAccount.Name;
+                this.AccountStatus = billingAccount.AccountStatus;
+                this.AccountType = billingAccount.AccountType;
                 this.AgreementType = billingAccount.AgreementType;
                 this.DisplayName = billingAccount.DisplayName;
+                this.HasReadAccess = billingAccount.HasReadAccess;
                 if (billingAccount.SoldTo != null)
                 {
-                    this.Address = new PSAddressDetails(billingAccount.SoldTo);
+                    this.SoldTo = new PSAddressDetails(billingAccount.SoldTo);
                 }
 
-                if (billingAccount.BillingProfiles != null)
+                if (billingAccount.BillingProfiles?.Value != null && billingAccount.BillingProfiles.Value.Any())
                 {
                     this.BillingProfiles =
                         billingAccount.BillingProfiles.Value.Select(billingProfile => new PSBillingProfile(billingProfile));

@@ -25,7 +25,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingAccounts
     [Cmdlet("Get", ResourceManager.Common.AzureRMConstants.AzureRMPrefix + "BillingAccount", DefaultParameterSetName = Constants.ParameterSetNames.ListParameterSet), OutputType(typeof(PSBillingAccount))]
     public class GetAzureRmBillingAccount : AzureBillingCmdletBase
     {
-        private const string AddressExpand = "address";
+        private const string AddressExpand = "soldTo";
 
         const string BillingProfilesExpand = "billingProfiles";
 
@@ -43,6 +43,10 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingAccounts
 
         [Parameter(Mandatory = false, HelpMessage = "Expand the billing profiles and invoice sections under the billing profiles.")]
         public SwitchParameter ExpandInvoiceSections { get; set; }
+
+        [Parameter(Mandatory = false, HelpMessage = "List the billing entities like billing profiles, invoice sections, azure plan which are used for creating a subscription.",
+            ParameterSetName = Constants.ParameterSetNames.SingleItemParameterSet)]
+        public SwitchParameter ListEntitiesToCreateSubscription { get; set; }
 
         public override void ExecuteCmdlet()
         {
@@ -70,10 +74,21 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingAccounts
                     {
                         try
                         {
-                            var billingAccount = new PSBillingAccount(string.IsNullOrWhiteSpace(expand)
-                                ? BillingManagementClient.BillingAccounts.Get(billingAccountName)
-                                : BillingManagementClient.BillingAccounts.Get(billingAccountName, expand));
-                            WriteObject(billingAccount);
+                            if (ListEntitiesToCreateSubscription.IsPresent)
+                            {
+                                var entitiesToCreateSubscription =
+                                    BillingManagementClient.BillingAccounts
+                                        .ListInvoiceSectionsByCreateSubscriptionPermission(billingAccountName)
+                                        .Select(x => new PSEntityToCreateSubscription(x));
+                                WriteObject(entitiesToCreateSubscription);
+                            }
+                            else
+                            {
+                                var billingAccount = new PSBillingAccount(string.IsNullOrWhiteSpace(expand)
+                                    ? BillingManagementClient.BillingAccounts.Get(billingAccountName)
+                                    : BillingManagementClient.BillingAccounts.Get(billingAccountName, expand));
+                                WriteObject(billingAccount);
+                            }
                         }
                         catch (ErrorResponseException error)
                         {
