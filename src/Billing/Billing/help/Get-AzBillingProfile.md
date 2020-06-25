@@ -45,38 +45,17 @@ Get the billing profile with the specified name.
 
 ### Example 3
 ```
-PS C:\> Get-AzBillingProfile -BillingAccountName 00000000-0000-0000-0000-000000000000 -ExpandEnabledAzurePlans
-```
-
-Get all billing profiles under specified billing account, and include the enabled azure plans in the result.
-
-### Example 4
-```
 PS C:\> Get-AzBillingProfile -BillingAccountName 00000000-0000-0000-0000-000000000000 -ExpandInvoiceSections
 ```
 
 Get all billing profiles under specified billing account, and include the invoice sections in the result.
 
-### Example 5
+### Example 4
 ```
 PS C:\> Get-AzBillingProfile -BillingAccountName 00000000-0000-0000-0000-000000000000 -ExpandInvoiceSections -Name <System.Collections.Generic.List`1[System.String]>
 ```
 
 Get the billing profile with the specified name, and include the invoice sections in the result.
-
-### Example 6
-```
-PS C:\> Get-AzBillingProfile -BillingAccountName 00000000-0000-0000-0000-000000000000 -ExpandEnabledAzurePlans -Name <System.Collections.Generic.List`1[System.String]>
-```
-
-Get the billing profile with the specified name, and include the enabled azure plans in the result.
-
-### Example 6
-```
-PS C:\> Get-AzBillingProfile -BillingAccountName 00000000-0000-0000-0000-000000000000 -ExpandEnabledAzurePlans -ExpandInvoiceSections -Name <System.Collections.Generic.List`1[System.String]>
-```
-
-Get the billing profile with the specified name, and include the enabled azure plans and invoice sections in the result.
 
 ## PARAMETERS
 
