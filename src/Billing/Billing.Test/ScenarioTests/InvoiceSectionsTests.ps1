@@ -18,7 +18,7 @@ List invoice sections
 #>
 function Test-ListInvoiceSections
 {
-    $invoiceSections = Get-AzInvoiceSection -BillingAccountName 723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31 -BillingProfileName H6RI-TXWC-BG7-PGB
+    $invoiceSections = Get-AzInvoiceSection -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -BillingProfileName PO6F-IWMU-BG7-TGB
 
     Assert-True {$invoiceSections.Count -ge 1}
 	Assert-NotNull $invoiceSections[0].Name
@@ -33,10 +33,10 @@ Get invoice section with specified name
 #>
 function Test-GetInvoiceSectionWithName
 {
-    $sampleInvoiceSections = Get-AzInvoiceSection -BillingAccountName 723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31 -BillingProfileName H6RI-TXWC-BG7-PGB
+    $sampleInvoiceSections = Get-AzInvoiceSection -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -BillingProfileName PO6F-IWMU-BG7-TGB
 	Assert-True {$sampleInvoiceSections.Count -ge 1}
 
-	$invoiceSection = Get-AzInvoiceSection -BillingAccountName 723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31 -BillingProfileName H6RI-TXWC-BG7-PGB -Name $sampleInvoiceSections[0].Name
+	$invoiceSection = Get-AzInvoiceSection -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -BillingProfileName PO6F-IWMU-BG7-TGB -Name $sampleInvoiceSections[0].Name
 
 	Assert-AreEqual $invoiceSection.Id $sampleInvoiceSections[0].Id
 }
@@ -47,10 +47,10 @@ Get billing account with specified names
 #>
 function Test-GetInvoiceSectionWithNames
 {
-	$sampleInvoiceSections = Get-AzInvoiceSection -BillingAccountName 723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31 -BillingProfileName H6RI-TXWC-BG7-PGB
+	$sampleInvoiceSections = Get-AzInvoiceSection -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -BillingProfileName PO6F-IWMU-BG7-TGB
 	Assert-True {$sampleInvoiceSections.Count -gt 1}
 
-	$invoiceSections = Get-AzInvoiceSection -BillingAccountName 723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31 -BillingProfileName H6RI-TXWC-BG7-PGB -Name $sampleInvoiceSections.Name
+	$invoiceSections = Get-AzInvoiceSection -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -BillingProfileName PO6F-IWMU-BG7-TGB -Name $sampleInvoiceSections.Name
 
     Assert-AreEqual $sampleInvoiceSections.Count $invoiceSections.Count
 }

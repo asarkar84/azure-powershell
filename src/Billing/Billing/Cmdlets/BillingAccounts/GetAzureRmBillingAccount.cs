@@ -25,7 +25,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.BillingAccounts
     [Cmdlet("Get", ResourceManager.Common.AzureRMConstants.AzureRMPrefix + "BillingAccount", DefaultParameterSetName = Constants.ParameterSetNames.ListParameterSet), OutputType(typeof(PSBillingAccount))]
     public class GetAzureRmBillingAccount : AzureBillingCmdletBase
     {
-        private const string AddressExpand = "address";
+        private const string AddressExpand = "soldTo";
 
         const string BillingProfilesExpand = "billingProfiles";
 

@@ -26,13 +26,13 @@ function Test-ListBillingAccounts
 	Assert-NotNull $billingAccounts[0].Type
 	Assert-NotNull $billingAccounts[0].DisplayName
 	Assert-NotNull $billingAccounts[0].AgreementType
-	Assert-Null $billingAccounts[0].Address
+	Assert-Null $billingAccounts[0].SoldTo
 	Assert-Null $billingAccounts[0].BillingProfiles
 }
 
 <#
 .SYNOPSIS
-List billing accounts with Address
+List billing accounts with SoldTo Address
 #>
 function Test-ListBillingAccountsWithAddress
 {
@@ -44,8 +44,8 @@ function Test-ListBillingAccountsWithAddress
 	Assert-NotNull $billingAccounts[0].Type
 	Assert-NotNull $billingAccounts[0].DisplayName
 	Assert-NotNull $billingAccounts[0].AgreementType
-	Assert-NotNull $billingAccounts[0].Address
-	Assert-NotNull $billingAccounts[0].Address.Country
+	Assert-NotNull $billingAccounts[0].SoldTo
+	Assert-NotNull $billingAccounts[0].SoldTo.Country
 	Assert-Null $billingAccounts[0].BillingProfiles
 }
 
@@ -65,8 +65,8 @@ function Test-ListBillingAccountsWithBillingProfiles
 	Assert-NotNull $billingAccounts[0].AgreementType
 	Assert-NotNull $billingAccounts[0].BillingProfiles
 	Assert-True {$billingAccounts[0].BillingProfiles.Count -ge 1}
-	Assert-NotNull $billingAccounts[0].BillingProfiles[0].Address
-	Assert-Null $billingAccounts[0].Address
+	Assert-NotNull $billingAccounts[0].BillingProfiles[0].BillTo
+	Assert-Null $billingAccounts[0].SoldTo
 }
 
 <#
@@ -87,7 +87,7 @@ function Test-ListBillingAccountsWithInvoiceSections
 	Assert-True {$billingAccounts[0].BillingProfiles.Count -ge 1}
 	Assert-NotNull $billingAccounts[0].BillingProfiles[0].InvoiceSections
 	Assert-True {$billingAccounts[0].BillingProfiles[0].InvoiceSections.Count -ge 1}
-	Assert-Null $billingAccounts[0].Address
+	Assert-Null $billingAccounts[0].SoldTo
 }
 
 <#

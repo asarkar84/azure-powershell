@@ -1,22 +1,94 @@
 {
   "Entries": [
     {
-      "RequestUri": "/providers/Microsoft.Billing/billingAccounts?api-version=2019-10-01-preview",
-      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHM/YXBpLXZlcnNpb249MjAxOS0xMC0wMS1wcmV2aWV3",
+      "RequestUri": "/providers/Microsoft.Billing/billingAccounts?api-version=2020-05-01",
+      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHM/YXBpLXZlcnNpb249MjAyMC0wNS0wMQ==",
       "RequestMethod": "GET",
       "RequestBody": "",
       "RequestHeaders": {
         "x-ms-client-request-id": [
-          "c6ba0855-e29c-4be4-af5e-2ed0f3a86a58"
+          "3cb022ad-49da-4690-b12f-a505856c1927"
         ],
         "Accept-Language": [
           "en-US"
         ],
         "User-Agent": [
-          "FxVersion/4.6.28008.01",
+          "FxVersion/4.6.27110.04",
           "OSName/Windows",
           "OSVersion/Microsoft.Windows.10.0.18363.",
-          "Microsoft.Azure.Management.Billing.BillingManagementClient/3.0.0.0"
+          "Microsoft.Azure.Management.Billing.BillingManagementClient/4.0.0.0"
+        ]
+      },
+      "ResponseHeaders": {
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-ratelimit-remaining-tenant-reads": [
+          "11999"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-service-version": [
+          "10.6.1271.445"
+        ],
+        "api-supported-versions": [
+          "2018-11-01-preview, 2019-10-01-preview, 2020-05-01"
+        ],
+        "X-Frame-Options": [
+          "DENY"
+        ],
+        "x-ms-request-id": [
+          "3ff85e01-6aab-413b-994b-79d35a66d887"
+        ],
+        "x-ms-correlation-request-id": [
+          "3ff85e01-6aab-413b-994b-79d35a66d887"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20200625T011417Z:3ff85e01-6aab-413b-994b-79d35a66d887"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Date": [
+          "Thu, 25 Jun 2020 01:14:17 GMT"
+        ],
+        "Content-Length": [
+          "504"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/providers/Microsoft.Billing/billingAccounts/c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31\",\r\n      \"name\": \"c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31\",\r\n      \"properties\": {\r\n        \"accountStatus\": \"Active\",\r\n        \"accountType\": \"Enterprise\",\r\n        \"agreementType\": \"MicrosoftCustomerAgreement\",\r\n        \"billingProfiles\": {\r\n          \"hasMoreResults\": false\r\n        },\r\n        \"displayName\": \"My billing account -5-27\",\r\n        \"hasReadAccess\": true\r\n      },\r\n      \"type\": \"Microsoft.Billing/billingAccounts\"\r\n    }\r\n  ]\r\n}",
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/c017063b-18ad-5e26-f4af-a4d7eff204cb%3A171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31?api-version=2020-05-01",
+      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvYzAxNzA2M2ItMThhZC01ZTI2LWY0YWYtYTRkN2VmZjIwNGNiJTNBMTcxZGYyNGUtYzkyNC00YzU4LTlkYWEtYTBiZGIxNjg2ZmVmXzIwMTktMDUtMzE/YXBpLXZlcnNpb249MjAyMC0wNS0wMQ==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "c0be6a1c-a1e8-46e2-a6b4-6333640b518a"
+        ],
+        "Accept-Language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.27110.04",
+          "OSName/Windows",
+          "OSVersion/Microsoft.Windows.10.0.18363.",
+          "Microsoft.Azure.Management.Billing.BillingManagementClient/4.0.0.0"
         ]
       },
       "ResponseHeaders": {
@@ -36,31 +108,31 @@
           "max-age=31536000; includeSubDomains"
         ],
         "x-ms-service-version": [
-          "9.11.1067.350"
+          "10.6.1271.445"
         ],
         "api-supported-versions": [
-          "2018-11-01-preview, 2019-10-01-preview"
+          "2018-11-01-preview, 2019-10-01-preview, 2020-05-01"
         ],
         "X-Frame-Options": [
           "DENY"
         ],
         "x-ms-request-id": [
-          "7b6e1d19-4b79-4911-a45f-12aab9e54404"
+          "b93a9f43-9304-4d73-a498-8296a98977dc"
         ],
         "x-ms-correlation-request-id": [
-          "7b6e1d19-4b79-4911-a45f-12aab9e54404"
+          "b93a9f43-9304-4d73-a498-8296a98977dc"
         ],
         "x-ms-routing-request-id": [
-          "WESTUS:20191205T220920Z:7b6e1d19-4b79-4911-a45f-12aab9e54404"
+          "WESTUS2:20200625T011418Z:b93a9f43-9304-4d73-a498-8296a98977dc"
         ],
         "X-Content-Type-Options": [
           "nosniff"
         ],
         "Date": [
-          "Thu, 05 Dec 2019 22:09:20 GMT"
+          "Thu, 25 Jun 2020 01:14:17 GMT"
         ],
         "Content-Length": [
-          "582"
+          "492"
         ],
         "Content-Type": [
           "application/json; charset=utf-8"
@@ -69,84 +141,12 @@
           "-1"
         ]
       },
-      "ResponseBody": "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/providers/Microsoft.Billing/billingAccounts/723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31\",\r\n      \"name\": \"723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31\",\r\n      \"properties\": {\r\n        \"accountId\": \"723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8\",\r\n        \"accountStatus\": \"Active\",\r\n        \"accountType\": \"Enterprise\",\r\n        \"agreementType\": \"MicrosoftCustomerAgreement\",\r\n        \"displayName\": \"Canary Test EA Transition 2\",\r\n        \"hasReadAccess\": true,\r\n        \"organizationId\": \"4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31\"\r\n      },\r\n      \"type\": \"Microsoft.Billing/billingAccounts\"\r\n    }\r\n  ]\r\n}",
-      "StatusCode": 200
-    },
-    {
-      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8%3A4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31?api-version=2019-10-01-preview",
-      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvNzIzYzhjZTAtMzNiYS01YmE3LWVmMjMtZTFiNzJmMTVmMWQ4JTNBNGNlNWI1MzAtYzgyYi00NGU4LTk3ZWMtNDlmM2NjZTlmMTRkXzIwMTktMDUtMzE/YXBpLXZlcnNpb249MjAxOS0xMC0wMS1wcmV2aWV3",
-      "RequestMethod": "GET",
-      "RequestBody": "",
-      "RequestHeaders": {
-        "x-ms-client-request-id": [
-          "854833fb-1c12-4c94-a7eb-327af46ea8c4"
-        ],
-        "Accept-Language": [
-          "en-US"
-        ],
-        "User-Agent": [
-          "FxVersion/4.6.28008.01",
-          "OSName/Windows",
-          "OSVersion/Microsoft.Windows.10.0.18363.",
-          "Microsoft.Azure.Management.Billing.BillingManagementClient/3.0.0.0"
-        ]
-      },
-      "ResponseHeaders": {
-        "Cache-Control": [
-          "no-cache"
-        ],
-        "Pragma": [
-          "no-cache"
-        ],
-        "Vary": [
-          "Accept-Encoding"
-        ],
-        "x-ms-ratelimit-remaining-tenant-reads": [
-          "11997"
-        ],
-        "Strict-Transport-Security": [
-          "max-age=31536000; includeSubDomains"
-        ],
-        "x-ms-service-version": [
-          "9.11.1067.350"
-        ],
-        "api-supported-versions": [
-          "2018-11-01-preview, 2019-10-01-preview"
-        ],
-        "X-Frame-Options": [
-          "DENY"
-        ],
-        "x-ms-request-id": [
-          "0fcd2645-1392-47b2-8057-4358f0b5bd59"
-        ],
-        "x-ms-correlation-request-id": [
-          "0fcd2645-1392-47b2-8057-4358f0b5bd59"
-        ],
-        "x-ms-routing-request-id": [
-          "WESTUS:20191205T220921Z:0fcd2645-1392-47b2-8057-4358f0b5bd59"
-        ],
-        "X-Content-Type-Options": [
-          "nosniff"
-        ],
-        "Date": [
-          "Thu, 05 Dec 2019 22:09:20 GMT"
-        ],
-        "Content-Length": [
-          "570"
-        ],
-        "Content-Type": [
-          "application/json; charset=utf-8"
-        ],
-        "Expires": [
-          "-1"
-        ]
-      },
-      "ResponseBody": "{\r\n  \"id\": \"/providers/Microsoft.Billing/billingAccounts/723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31\",\r\n  \"name\": \"723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8:4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31\",\r\n  \"properties\": {\r\n    \"accountId\": \"723c8ce0-33ba-5ba7-ef23-e1b72f15f1d8\",\r\n    \"accountStatus\": \"Active\",\r\n    \"accountType\": \"Enterprise\",\r\n    \"agreementType\": \"MicrosoftCustomerAgreement\",\r\n    \"displayName\": \"Canary Test EA Transition 2\",\r\n    \"hasReadAccess\": true,\r\n    \"organizationId\": \"4ce5b530-c82b-44e8-97ec-49f3cce9f14d_2019-05-31\"\r\n  },\r\n  \"type\": \"Microsoft.Billing/billingAccounts\"\r\n}",
+      "ResponseBody": "{\r\n  \"id\": \"/providers/Microsoft.Billing/billingAccounts/c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31\",\r\n  \"name\": \"c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31\",\r\n  \"properties\": {\r\n    \"accountStatus\": \"Active\",\r\n    \"accountType\": \"Enterprise\",\r\n    \"agreementType\": \"MicrosoftCustomerAgreement\",\r\n    \"billingProfiles\": {\r\n      \"hasMoreResults\": false\r\n    },\r\n    \"displayName\": \"My billing account -5-27\",\r\n    \"hasReadAccess\": true\r\n  },\r\n  \"type\": \"Microsoft.Billing/billingAccounts\"\r\n}",
       "StatusCode": 200
     }
   ],
   "Names": {},
   "Variables": {
-    "SubscriptionId": "df6e24cd-21d5-4f70-ac15-32bb1f8b4536"
+    "SubscriptionId": "0e660d57-d14d-44e2-9586-a1e29288996e"
   }
 }
