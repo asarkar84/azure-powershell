@@ -43,28 +43,14 @@ namespace Microsoft.Azure.Commands.Billing.Test.ScenarioTests
         {
             TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetBillingProfileWithName");
         }
-
-        [Fact]
-        [Trait(Category.AcceptanceType, Category.CheckIn)]
-        public void TestGetBillingProfileWithEnabledAzurePlans()
-        {
-            TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetBillingProfileWithEnabledAzurePlans");
-        }
-
+        
         [Fact]
         [Trait(Category.AcceptanceType, Category.CheckIn)]
         public void TestGetBillingProfileWithInvoiceSections()
         {
             TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetBillingProfileWithInvoiceSections");
         }
-
-        [Fact]
-        [Trait(Category.AcceptanceType, Category.CheckIn)]
-        public void TestGetBillingProfileByNameWithEnabledAzurePlans()
-        {
-            TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetBillingProfileByNameWithEnabledAzurePlans");
-        }
-
+        
         [Fact]
         [Trait(Category.AcceptanceType, Category.CheckIn)]
         public void TestGetBillingProfileByNameWithInvoiceSections()

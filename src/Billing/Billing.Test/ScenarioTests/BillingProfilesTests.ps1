@@ -58,31 +58,6 @@ function Test-GetBillingProfileWithName
 
 <#
 .SYNOPSIS
-Get billing profiles and include enabled azure plans
-#>
-function Test-GetBillingProfileWithEnabledAzurePlans
-{
-	$billingProfiles = Get-AzBillingProfile -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -ExpandEnabledAzurePlans
-
-    Assert-True {$billingProfiles.Count -ge 1}
-	Assert-NotNull $billingProfiles[0].Name
-	Assert-NotNull $billingProfiles[0].Id
-	Assert-NotNull $billingProfiles[0].Type
-	Assert-NotNull $billingProfiles[0].DisplayName
-	Assert-NotNull $billingProfiles[0].BillTo
-	Assert-NotNull $billingProfiles[0].BillTo.Country
-	Assert-NotNull $billingProfiles[0].BillTo.PostalCode
-	Assert-NotNull $billingProfiles[0].Currency
-	Assert-AreEqual 5 $billingProfiles[0].InvoiceDay
-	Assert-NotNull $billingProfiles[0].EnabledAzurePlans
-	Assert-True {$billingProfiles[0].EnabledAzurePlans.Count -ge 1}
-	Assert-NotNull $billingProfiles[0].EnabledAzurePlans[0].SkuId
-	Assert-NotNull $billingProfiles[0].EnabledAzurePlans[0].SkuDescription
-	Assert-Null $billingProfiles[0].invoiceSections
-}
-
-<#
-.SYNOPSIS
 Get billing profiles and include invoice sections
 #>
 function Test-GetBillingProfileWithInvoiceSections
@@ -104,34 +79,6 @@ function Test-GetBillingProfileWithInvoiceSections
 	Assert-True {$billingProfiles[0].invoiceSections.Count -ge 1}
 	Assert-NotNull $billingProfiles[0].invoiceSections[0].Id
 	Assert-NotNull $billingProfiles[0].invoiceSections[0].Name
-}
-
-
-<#
-.SYNOPSIS
-Get billing profile by name and include enabled azure plans
-#>
-function Test-GetBillingProfileByNameWithEnabledAzurePlans
-{
-	$sampleBillingProfiles = Get-AzBillingProfile -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31
-	Assert-True {$sampleBillingProfiles.Count -ge 1}
-
-	$billingProfile = Get-AzBillingProfile -BillingAccountName c017063b-18ad-5e26-f4af-a4d7eff204cb:171df24e-c924-4c58-9daa-a0bdb1686fef_2019-05-31 -Name $sampleBillingProfiles[0].Name -ExpandEnabledAzurePlans
-
-	Assert-NotNull $billingProfile.Name
-	Assert-NotNull $billingProfile.Id
-	Assert-NotNull $billingProfile.Type
-	Assert-NotNull $billingProfile.DisplayName
-	Assert-NotNull $billingProfile.BillTo
-	Assert-NotNull $billingProfile.BillTo.Country
-	Assert-NotNull $billingProfile.BillTo.PostalCode
-	Assert-NotNull $billingProfile.Currency
-	Assert-AreEqual 5 $billingProfile.InvoiceDay
-	Assert-NotNull $billingProfile.EnabledAzurePlans
-	Assert-True {$billingProfile.EnabledAzurePlans.Count -ge 1}
-	Assert-NotNull $billingProfile.EnabledAzurePlans[0].SkuId
-	Assert-NotNull $billingProfile.EnabledAzurePlans[0].SkuDescription
-	Assert-Null $billingProfile.invoiceSections
 }
 
 <#
