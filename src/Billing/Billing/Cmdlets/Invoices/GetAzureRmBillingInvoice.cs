@@ -114,8 +114,13 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                     if (invoices != null)
                     {
                         foreach (var invoice in invoices)
-                        {
+                        { 
                             var psInvoice = new PSInvoice(invoice);
+                            if (GenerateDownloadUrl)
+                            {
+                                this.GetDownloadUrl(psInvoice.Name, invoice, psInvoice);
+                            }
+                           
                             WriteObject(psInvoice);
                         }
                     }
@@ -161,19 +166,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                             var psInvoice = new PSInvoice(invoice);
                             if (GenerateDownloadUrl)
                             {
-                                var invoiceDocument = invoice.Documents.FirstOrDefault(p =>
-                                    p.Kind.ToUpperInvariant() == "INVOICE" && p.Url.Contains(invoice.Name));
-
-                                if (invoiceDocument != null)
-                                {
-                                    var downloadUrl = BillingManagementClient.Invoices
-                                        .DownloadBillingSubscriptionInvoice(
-                                            invoiceName: invoiceName,
-                                            downloadToken: GenerateDownloadToken(invoiceDocument.Url,
-                                                invoiceDocument.Source));
-                                    psInvoice.DownloadUrl = downloadUrl.Url;
-                                    psInvoice.DownloadUrlExpiry = downloadUrl.ExpiryTime;
-                                }
+                                this.GetDownloadUrl(invoiceName, invoice, psInvoice);
                             }
 
                             WriteObject(psInvoice);
@@ -208,6 +201,24 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                     return string.Empty;
 
             }
+        }
+
+        private void GetDownloadUrl(string invoiceName, Invoice invoice, PSInvoice psInvoice)
+        {
+            var invoiceDocument = invoice.Documents.FirstOrDefault(p =>
+                p.Kind.ToUpperInvariant() == "INVOICE" && p.Url.Contains(invoice.Name));
+
+            if (invoiceDocument != null)
+            {
+                var downloadUrl = BillingManagementClient.Invoices
+                    .DownloadBillingSubscriptionInvoice(
+                        invoiceName: invoiceName,
+                        downloadToken: GenerateDownloadToken(invoiceDocument.Url,
+                            invoiceDocument.Source));
+                psInvoice.DownloadUrl = downloadUrl.Url;
+                psInvoice.DownloadUrlExpiry = downloadUrl.ExpiryTime;
+            }
+
         }
     }
 }
