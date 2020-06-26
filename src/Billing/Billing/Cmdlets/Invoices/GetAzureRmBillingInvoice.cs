@@ -141,7 +141,13 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                             orderby invoice.InvoiceDate descending
                             select invoice).Take(1);
 
-                        WriteObject(new PSInvoice(recentInvoice.FirstOrDefault()));
+                        var psInvoice = new PSInvoice(recentInvoice.FirstOrDefault());
+
+                        if (GenerateDownloadUrl)
+                        {
+                            this.GetDownloadUrl(psInvoice.Name, recentInvoice.FirstOrDefault(), psInvoice);
+                        }
+                        WriteObject(psInvoice);
                     }
                 }
                 else if (ParameterSetName.Equals(Constants.ParameterSetNames.SingleItemParameterSet))
