@@ -1,13 +1,13 @@
 {
   "Entries": [
     {
-      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/invoices?periodStartDate=2019-06-01T00%3A00%3A00.0000000&periodEndDate=2020-06-25T18%3A12%3A14.1873629-07%3A00&api-version=2020-05-01",
-      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvZGVmYXVsdC9iaWxsaW5nU3Vic2NyaXB0aW9ucy9hOGY3ZDBhMS0yMDRjLTQ3OGEtODZmMC1iYzUzY2U4ZDMzYTgvaW52b2ljZXM/cGVyaW9kU3RhcnREYXRlPTIwMTktMDYtMDFUMDAlM0EwMCUzQTAwLjAwMDAwMDAmcGVyaW9kRW5kRGF0ZT0yMDIwLTA2LTI1VDE4JTNBMTIlM0ExNC4xODczNjI5LTA3JTNBMDAmYXBpLXZlcnNpb249MjAyMC0wNS0wMQ==",
+      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/invoices?periodStartDate=2019-06-01T00%3A00%3A00.0000000&periodEndDate=2020-06-26T22%3A55%3A30.7676405-07%3A00&api-version=2020-05-01",
+      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvZGVmYXVsdC9iaWxsaW5nU3Vic2NyaXB0aW9ucy9hOGY3ZDBhMS0yMDRjLTQ3OGEtODZmMC1iYzUzY2U4ZDMzYTgvaW52b2ljZXM/cGVyaW9kU3RhcnREYXRlPTIwMTktMDYtMDFUMDAlM0EwMCUzQTAwLjAwMDAwMDAmcGVyaW9kRW5kRGF0ZT0yMDIwLTA2LTI2VDIyJTNBNTUlM0EzMC43Njc2NDA1LTA3JTNBMDAmYXBpLXZlcnNpb249MjAyMC0wNS0wMQ==",
       "RequestMethod": "GET",
       "RequestBody": "",
       "RequestHeaders": {
         "x-ms-client-request-id": [
-          "7aeceaa5-7c48-43f2-8c9b-0095ed70b391"
+          "f459e0b6-dcfe-4ab1-891a-14d7792165dc"
         ],
         "Accept-Language": [
           "en-US"
@@ -36,7 +36,7 @@
           "max-age=31536000; includeSubDomains"
         ],
         "x-ms-service-version": [
-          "10.6.1271.445"
+          "10.6.1273.447"
         ],
         "api-supported-versions": [
           "2018-11-01-preview, 2019-10-01-preview, 2020-05-01"
@@ -45,19 +45,19 @@
           "DENY"
         ],
         "x-ms-request-id": [
-          "50dde665-5a19-4e37-a066-188f2c13a7de"
+          "b514bcbc-137d-482d-91a2-291ccdb9728d"
         ],
         "x-ms-correlation-request-id": [
-          "50dde665-5a19-4e37-a066-188f2c13a7de"
+          "b514bcbc-137d-482d-91a2-291ccdb9728d"
         ],
         "x-ms-routing-request-id": [
-          "WESTUS:20200626T011214Z:50dde665-5a19-4e37-a066-188f2c13a7de"
+          "WESTUS:20200627T055531Z:b514bcbc-137d-482d-91a2-291ccdb9728d"
         ],
         "X-Content-Type-Options": [
           "nosniff"
         ],
         "Date": [
-          "Fri, 26 Jun 2020 01:12:14 GMT"
+          "Sat, 27 Jun 2020 05:55:31 GMT"
         ],
         "Content-Length": [
           "1292"
@@ -79,7 +79,7 @@
       "RequestBody": "",
       "RequestHeaders": {
         "x-ms-client-request-id": [
-          "05a0047a-4841-4d0f-9f70-048b87b0f160"
+          "b973fa43-88ac-4552-bdc0-4629c6b08eb2"
         ],
         "Accept-Language": [
           "en-US"
@@ -99,7 +99,7 @@
           "no-cache"
         ],
         "Location": [
-          "https://management.azure.com/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/operationResults/invoiceDownload_b285c121-12bb-41b3-b9b8-5f30fe872e38?api-version=2020-05-01"
+          "https://management.azure.com/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/operationResults/invoiceDownload_d2a34618-a755-4284-982e-7f00f8354050?api-version=2020-05-01"
         ],
         "Retry-After": [
           "10"
@@ -108,7 +108,7 @@
           "max-age=31536000; includeSubDomains"
         ],
         "x-ms-service-version": [
-          "10.6.1271.445"
+          "10.6.1273.447"
         ],
         "api-supported-versions": [
           "2018-11-01-preview, 2019-10-01-preview, 2020-05-01"
@@ -120,19 +120,19 @@
           "1199"
         ],
         "x-ms-request-id": [
-          "7c14fab0-66d8-44ab-ba79-df4f6af1c7f2"
+          "10f30dea-7c37-4eb6-8575-6a805d23b595"
         ],
         "x-ms-correlation-request-id": [
-          "7c14fab0-66d8-44ab-ba79-df4f6af1c7f2"
+          "10f30dea-7c37-4eb6-8575-6a805d23b595"
         ],
         "x-ms-routing-request-id": [
-          "WESTUS:20200626T011215Z:7c14fab0-66d8-44ab-ba79-df4f6af1c7f2"
+          "WESTUS:20200627T055532Z:10f30dea-7c37-4eb6-8575-6a805d23b595"
         ],
         "X-Content-Type-Options": [
           "nosniff"
         ],
         "Date": [
-          "Fri, 26 Jun 2020 01:12:15 GMT"
+          "Sat, 27 Jun 2020 05:55:32 GMT"
         ],
         "Expires": [
           "-1"
@@ -145,8 +145,8 @@
       "StatusCode": 202
     },
     {
-      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/operationResults/invoiceDownload_b285c121-12bb-41b3-b9b8-5f30fe872e38?api-version=2020-05-01",
-      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvZGVmYXVsdC9iaWxsaW5nU3Vic2NyaXB0aW9ucy9hOGY3ZDBhMS0yMDRjLTQ3OGEtODZmMC1iYzUzY2U4ZDMzYTgvb3BlcmF0aW9uUmVzdWx0cy9pbnZvaWNlRG93bmxvYWRfYjI4NWMxMjEtMTJiYi00MWIzLWI5YjgtNWYzMGZlODcyZTM4P2FwaS12ZXJzaW9uPTIwMjAtMDUtMDE=",
+      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/operationResults/invoiceDownload_d2a34618-a755-4284-982e-7f00f8354050?api-version=2020-05-01",
+      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvZGVmYXVsdC9iaWxsaW5nU3Vic2NyaXB0aW9ucy9hOGY3ZDBhMS0yMDRjLTQ3OGEtODZmMC1iYzUzY2U4ZDMzYTgvb3BlcmF0aW9uUmVzdWx0cy9pbnZvaWNlRG93bmxvYWRfZDJhMzQ2MTgtYTc1NS00Mjg0LTk4MmUtN2YwMGY4MzU0MDUwP2FwaS12ZXJzaW9uPTIwMjAtMDUtMDE=",
       "RequestMethod": "GET",
       "RequestBody": "",
       "RequestHeaders": {
@@ -174,7 +174,7 @@
           "max-age=31536000; includeSubDomains"
         ],
         "x-ms-service-version": [
-          "10.6.1271.445"
+          "10.6.1273.447"
         ],
         "api-supported-versions": [
           "2018-11-01-preview, 2019-10-01-preview, 2020-05-01"
@@ -183,22 +183,22 @@
           "DENY"
         ],
         "x-ms-request-id": [
-          "101e7913-2b40-4a5a-b2d9-225a653a28b8"
+          "16d23c52-b33e-4eeb-9be6-0fe22e0e39b2"
         ],
         "x-ms-correlation-request-id": [
-          "101e7913-2b40-4a5a-b2d9-225a653a28b8"
+          "16d23c52-b33e-4eeb-9be6-0fe22e0e39b2"
         ],
         "x-ms-routing-request-id": [
-          "WESTUS:20200626T011225Z:101e7913-2b40-4a5a-b2d9-225a653a28b8"
+          "WESTUS:20200627T055542Z:16d23c52-b33e-4eeb-9be6-0fe22e0e39b2"
         ],
         "X-Content-Type-Options": [
           "nosniff"
         ],
         "Date": [
-          "Fri, 26 Jun 2020 01:12:25 GMT"
+          "Sat, 27 Jun 2020 05:55:42 GMT"
         ],
         "Content-Length": [
-          "196"
+          "192"
         ],
         "Content-Type": [
           "application/json; charset=utf-8"
@@ -207,12 +207,12 @@
           "-1"
         ]
       },
-      "ResponseBody": "{\r\n  \"url\": \"https://billingrppub.blob.core.windows.net/invoices/T000512627_6390568816.pdf?sv=2019-02-02&sr=b&sig=VDM3yaZno2NZDzqN1vqIDMpf%2Fcd2mZ%2BAVbJtwN%2BaCvk%3D&se=2020-06-26T01%3A22%3A15Z&sp=r\"\r\n}",
+      "ResponseBody": "{\r\n  \"url\": \"https://billingrppub.blob.core.windows.net/invoices/T000512627_6390568816.pdf?sv=2019-02-02&sr=b&sig=4wlrVN570ns6UGnLwVUpCdirt3AwsdDsNrP3uJ%2FXcS8%3D&se=2020-06-27T06%3A05%3A35Z&sp=r\"\r\n}",
       "StatusCode": 200
     },
     {
-      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/operationResults/invoiceDownload_b285c121-12bb-41b3-b9b8-5f30fe872e38?api-version=2020-05-01",
-      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvZGVmYXVsdC9iaWxsaW5nU3Vic2NyaXB0aW9ucy9hOGY3ZDBhMS0yMDRjLTQ3OGEtODZmMC1iYzUzY2U4ZDMzYTgvb3BlcmF0aW9uUmVzdWx0cy9pbnZvaWNlRG93bmxvYWRfYjI4NWMxMjEtMTJiYi00MWIzLWI5YjgtNWYzMGZlODcyZTM4P2FwaS12ZXJzaW9uPTIwMjAtMDUtMDE=",
+      "RequestUri": "/providers/Microsoft.Billing/billingAccounts/default/billingSubscriptions/a8f7d0a1-204c-478a-86f0-bc53ce8d33a8/operationResults/invoiceDownload_d2a34618-a755-4284-982e-7f00f8354050?api-version=2020-05-01",
+      "EncodedRequestUri": "L3Byb3ZpZGVycy9NaWNyb3NvZnQuQmlsbGluZy9iaWxsaW5nQWNjb3VudHMvZGVmYXVsdC9iaWxsaW5nU3Vic2NyaXB0aW9ucy9hOGY3ZDBhMS0yMDRjLTQ3OGEtODZmMC1iYzUzY2U4ZDMzYTgvb3BlcmF0aW9uUmVzdWx0cy9pbnZvaWNlRG93bmxvYWRfZDJhMzQ2MTgtYTc1NS00Mjg0LTk4MmUtN2YwMGY4MzU0MDUwP2FwaS12ZXJzaW9uPTIwMjAtMDUtMDE=",
       "RequestMethod": "GET",
       "RequestBody": "",
       "RequestHeaders": {
@@ -240,7 +240,7 @@
           "max-age=31536000; includeSubDomains"
         ],
         "x-ms-service-version": [
-          "10.6.1271.445"
+          "10.6.1273.447"
         ],
         "api-supported-versions": [
           "2018-11-01-preview, 2019-10-01-preview, 2020-05-01"
@@ -249,22 +249,22 @@
           "DENY"
         ],
         "x-ms-request-id": [
-          "34075f85-11b4-485e-b515-716d424c5d95"
+          "52714a1e-e8fc-4005-af4c-362c023a8d07"
         ],
         "x-ms-correlation-request-id": [
-          "34075f85-11b4-485e-b515-716d424c5d95"
+          "52714a1e-e8fc-4005-af4c-362c023a8d07"
         ],
         "x-ms-routing-request-id": [
-          "WESTUS:20200626T011225Z:34075f85-11b4-485e-b515-716d424c5d95"
+          "WESTUS:20200627T055542Z:52714a1e-e8fc-4005-af4c-362c023a8d07"
         ],
         "X-Content-Type-Options": [
           "nosniff"
         ],
         "Date": [
-          "Fri, 26 Jun 2020 01:12:25 GMT"
+          "Sat, 27 Jun 2020 05:55:42 GMT"
         ],
         "Content-Length": [
-          "196"
+          "192"
         ],
         "Content-Type": [
           "application/json; charset=utf-8"
@@ -273,7 +273,7 @@
           "-1"
         ]
       },
-      "ResponseBody": "{\r\n  \"url\": \"https://billingrppub.blob.core.windows.net/invoices/T000512627_6390568816.pdf?sv=2019-02-02&sr=b&sig=VDM3yaZno2NZDzqN1vqIDMpf%2Fcd2mZ%2BAVbJtwN%2BaCvk%3D&se=2020-06-26T01%3A22%3A15Z&sp=r\"\r\n}",
+      "ResponseBody": "{\r\n  \"url\": \"https://billingrppub.blob.core.windows.net/invoices/T000512627_6390568816.pdf?sv=2019-02-02&sr=b&sig=4wlrVN570ns6UGnLwVUpCdirt3AwsdDsNrP3uJ%2FXcS8%3D&se=2020-06-27T06%3A05%3A35Z&sp=r\"\r\n}",
       "StatusCode": 200
     }
   ],
