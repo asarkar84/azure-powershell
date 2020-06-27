@@ -80,9 +80,9 @@ function Test-GetLatestInvoice
 
 <#
 .SYNOPSIS
-Get invoice with specified name
+Get invoice with specified name with GenerateDownloadUrl
 #>
-function Test-GetInvoiceWithName
+function Test-GetInvoiceByNameWithDownloadUrl
 {
 	$billingInvoices = Get-AzBillingInvoice -Name T000512627 -GenerateDownloadUrl
 
@@ -194,7 +194,6 @@ Get latest invoice by BillingAccountName and InvoiceName with DownloadUrl
 #>
 function Test-GetModernInvoiceByBillingAccountNameAndInvoiceNameWithDownloadUrl
 {
-# TODO: add invoiceId for modern invoice
     $billingInvoices = Get-AzBillingInvoice -Name T000512627 -BillingAccountName db038d21-b0d2-463c-942f-b09127c6f4e4:7c9c4a38-593e-479e-8958-9a338a0d8d02_2019-05-31 -GenerateDownloadUrl
 
     Assert-NotNull $billingInvoices
@@ -211,7 +210,6 @@ Get latest invoice by BillingAccountName and InvoiceName and do not generate Dow
 #>
 function Test-GetModernInvoiceByBillingAccountNameAndInvoiceName
 {
-# TODO: add invoiceId for modern invoice
     $billingInvoices = Get-AzBillingInvoice -Name T000512627 -BillingAccountName db038d21-b0d2-463c-942f-b09127c6f4e4:7c9c4a38-593e-479e-8958-9a338a0d8d02_2019-05-31 
 
     Assert-NotNull $billingInvoices

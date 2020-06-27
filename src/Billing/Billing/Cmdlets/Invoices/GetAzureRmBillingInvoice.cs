@@ -20,6 +20,7 @@ using Microsoft.Azure.Management.Billing.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management.Automation;
+using System.Text.RegularExpressions;
 using Microsoft.Rest.Azure;
 using Microsoft.WindowsAzure.Commands.Common.CustomAttributes;
 
@@ -152,6 +153,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                     {
                         try
                         {
+                            var downloadBySubscription = false;
                             Invoice invoice = null;
                             if (!string.IsNullOrWhiteSpace(BillingAccountName)) // modern 
                             {
@@ -161,8 +163,10 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                             }
                             else // legacy
                             {
+                                // getbyId retrieves legacy and modern invoices 
                                 invoice =
                                     BillingManagementClient.Invoices.GetById(invoiceName);
+                                downloadBySubscription = true;
                             }
                             
                             var psInvoice = new PSInvoice(invoice);
@@ -171,7 +175,8 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
                                 this.GetDownloadUrl(
                                     invoice,
                                     psInvoice,
-                                    BillingAccountName ?? null);
+                                    BillingAccountName ?? null,
+                                    downloadBySubscription);
                             }
 
                             WriteObject(psInvoice);
@@ -190,7 +195,7 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
             }
         }
 
-        private void GetDownloadUrl(Invoice invoice, PSInvoice psInvoice, string billingAccountName)
+        private void GetDownloadUrl(Invoice invoice, PSInvoice psInvoice, string billingAccountName, bool downloadBySubscription = false)
         {
             var invoiceDocument = invoice.Documents.FirstOrDefault(p =>
                 p.Kind.Equals("INVOICE", StringComparison.InvariantCultureIgnoreCase)  
@@ -203,7 +208,8 @@ namespace Microsoft.Azure.Commands.Billing.Cmdlets.Invoices
 
                 var downloadToken = invoiceDocument.Url.Split('=')?[1].Split('&')?[0];
 
-                if (invoiceDocument.Url.ToLowerInvariant().Contains("billingaccounts/default/billingsubscriptions"))
+                if (invoiceDocument.Url.ToLowerInvariant().Contains("billingaccounts/default/billingsubscriptions") ||
+                    downloadBySubscription)
                 {
                     downloadUrl = BillingManagementClient.Invoices
                         .DownloadBillingSubscriptionInvoice(

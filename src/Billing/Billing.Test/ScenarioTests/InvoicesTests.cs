@@ -60,9 +60,9 @@ namespace Microsoft.Azure.Commands.Billing.Test.ScenarioTests
 
         [Fact]
         [Trait(Category.AcceptanceType, Category.CheckIn)]
-        public void TestGetInvoiceWithName()
+        public void TestGetInvoiceByNameWithDownloadUrl()
         {
-            TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetInvoiceWithName");
+            TestController.NewInstance.RunPowerShellTest(_logger, "Test-GetInvoiceByNameWithDownloadUrl");
         }
 
         // Modern invoice
