@@ -286,7 +286,7 @@ function Test-GetLatestInvoicesByBillingProfileName
 
 <#
 .SYNOPSIS
-Get latest invoice by BillingProfileName with billing period start and end date.
+Get invoices by BillingProfileName with billing period start and end date.
 #>
 function Test-GetInvoicesByBillingAccountNameBillingProfileNameBillingPeriod
 {
